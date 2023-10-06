@@ -1,0 +1,49 @@
+.calculator {
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 1px;
+    border-style: solid;
+    background-color: gray;
+}
+
+.screen {
+    height: 60px;
+    width: 350;
+    border: 1px solid;
+    border-radius: 2px;
+    border-style: solid;
+    text-align: center;
+    margin: 30px auto 10px;
+    background-color: white;
+}
+
+.buttons {
+    height: 350px;
+    width: 350px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin: auto;
+}
+
+.buttons .number {
+    font-size:20px
+}
+
+.buttons .operations, #value {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+.buttons .clear {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: none;
+}
+
+
