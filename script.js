@@ -30,16 +30,17 @@ function clearScreen() {
 
 equalsbtn.addEventListener("click", getAnswer);
 
-function getAnswer() {
+function getAnswer(operations) {
     const output = null;
-
     const equation = document.querySelector('.screen').value;
 
-    equation.parseFloat();
     console.log(equation);
 
-    var x = parseFloat(document.querySelector('.screen'));
-    var y = parseFloat(document.querySelector('.screen'));
+    var x = parseFloat(document.querySelector('.screen').value);
+
+    // var y = parseFloat(document.querySelector('.screen').value);
+
+    console.log(equation);
 
     switch(operations) {
         case "*":
@@ -55,4 +56,6 @@ function getAnswer() {
             output = x - y;
             break;
     }
+
+    document.querySelector('.screen').value = output;
 }
