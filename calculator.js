@@ -1,43 +1,27 @@
-var output = "";
-var x = null;
-var y = null;
+const numberbtn = document.querySelectorAll('.number');
+const operandbtn = document.querySelectorAll('.operations');
+const clearbtn = document.querySelector('.clear');
+
+clearbtn.addEventListener("click", clearScreen);
+
+for (let button of numberbtn) {
+    button.addEventListener("click", displayNumber);
+}
 
 function displayNumber(number) {
-    var result = document.querySelector(".screen");
-    var numbers = document.querySelectorAll(".number");
-    for (let number of numbers) {
-        number.addEventListener("click", () => {
-            result = numbers.innerHTML;
-        })
-    }
-    console.log(result);
+    const value = number.currentTarget.innerHTML;
+    document.querySelector('.screen').value += value;
+}
+
+for (let button of operandbtn) {
+    button.addEventListener("click", displayOperand);
 }
 
 function displayOperand(operation) {
-    const operations = document.querySelectorAll(".operations")
+    const value = operation.currentTarget.innerHTML;
+    document.querySelector('.screen').value += value;
 }
 
-function getAnswer(operations) {
-    switch(operations) {
-        case "x":
-            output = x * y;
-            break; 
-        case "/":
-            output = x / y;
-            break;
-        case "+":
-            output = x + y;
-            break;
-        case "-":
-            output = x - y;
-            break;
-    }
-}
-
-function clear() {
-    const display = "";
-    display = document.querySelector(".screen").innerHTML;
-    output = "";
-    x = "";
-    y = "";
+function clearScreen() {
+    document.querySelector('.screen').value = " ";
 }

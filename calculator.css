@@ -13,8 +13,10 @@
     border: 1px solid;
     border-radius: 2px;
     border-style: solid;
-    text-align: center;
-    margin: 30px auto 10px;
+    font-size: 50;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
     background-color: white;
 }
 
