@@ -2,12 +2,12 @@
     <head>
         <meta charset="utf-8" />
         <title>Calculator</title>
-        <link rel="stylesheet" href="calculator.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="calculator">
             <div class="display">
-                <input class="screen" id="result"></input>
+                <input class="screen" id="result" disabled></input>
             </div>
             <div class="buttons">
                 <button class="number">7</button>
@@ -21,13 +21,13 @@
                 <button class="number">1</button>
                 <button class="number">2</button>
                 <button class="number">3</button>
-                <button class="operations">x</button>
+                <button class="operations">*</button>
                 <button class="clear">C</button>   
                 <button class="number">0</button>
-                <button class="value" onclick="displayOperand()">=</button>
+                <button class="answer" onclick="getAnswer()">=</button>
                 <button class="operations">/</button>
             </div>
         </div>
-        <script src="calculator.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
